@@ -26,8 +26,8 @@ module.exports = yeoman.generators.Base.extend({
 
   prompting: function () {
     var done = this.async();
-    console.info(chalk.blue('Valid pages:'));
-    console.info(suites);
+    this.log(chalk.blue('Valid pages:'));
+    this.log(suites);
 
     var prompts = [{
       name: 'pageName',

@@ -34,9 +34,9 @@ module.exports = yeoman.generators.Base.extend({
     );
 
 
-    // this.fs.copyTpl(
-    //   this.templatePath('tests/suite/_all.js'),
-    //   this.destinationPath('tests/'+this.pageName+'/all.js')
-    // );
+    this.fs.copyTpl(
+      this.templatePath('tests/suite/_all.js'),
+      this.destinationPath('tests/'+this.pageName+'/all.js')
+    );
   },
 });
