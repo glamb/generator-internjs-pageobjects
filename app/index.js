@@ -16,7 +16,7 @@ module.exports = yeoman.generators.Base.extend({
 
     // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the perfect' + chalk.red('InternjsPageobjects') + ' generator!'
+      'Welcome to the ' + chalk.red('Internjs Page Objects') + ' generator!'
     ));
 
     var prompts = [{
@@ -31,7 +31,7 @@ module.exports = yeoman.generators.Base.extend({
     }];
 
     this.prompt(prompts, function (props) {
-      this.appname = props.appname;
+      this.appname = _.kebabCase(props.appname);
       this.author = props.author;
 
       done();
@@ -70,7 +70,6 @@ module.exports = yeoman.generators.Base.extend({
 
     bootstrapfiles: function () {
       this.copy('pages/base.js', 'pages/base.js');
-      this.copy('pages/page.js', 'pages/page.js');
       this.copy('tests/intern.js', 'tests/intern.js');
     }
   },

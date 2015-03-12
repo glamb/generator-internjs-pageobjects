@@ -3,14 +3,20 @@
 define([
   './Base'
 ], function (Base){
+  'use strict';
+
   function <%= _.capitalize(pageName) %>(remote) {
-    //Assign given remote to this remote
-    this.remote = remote;
+    // Url for this page
+    this.url = 'http://example.com';
+
+    // Assign given remote to base remote remote
+    Base.call(this, remote.get(this.url));
   }
 
   // Inherit from the initial page object
-  Base.prototype = new Base()
-  Base.prototype.constructor = <%= _.capitalize(pageName) %>;
+  <%= _.capitalize(pageName) %>.prototype = Object.create(Base.prototype);
+
+  // Put your methods for finding elements below
 
   return <%= _.capitalize(pageName) %>;
 });

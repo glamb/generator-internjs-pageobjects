@@ -18,7 +18,8 @@
   },
   "files": [
     "app",
-    "page"
+    "page",
+    "suite"
   ],
   "keywords": [
     "yeoman-generator"
@@ -28,7 +29,7 @@
     "chalk": "^0.5.0",
     "yosay": "^0.3.0",
     "underscore.string": "^2.4.0",
-    "lodash": "^2.4.1"
+    "lodash": "^3.0.0"
   },
   "devDependencies": {
     "mocha": "*"
