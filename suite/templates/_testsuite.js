@@ -3,14 +3,14 @@ define([
   'intern!object',
   'intern/chai!assert',
   'pageObjects/<%= _.capitalize(pageName) %>'
-],function() {
+], function (intern, registerSuite, assert, _.capitalize(pageName)) {
   'use strict';
 
   registerSuite(function () {
     var <%= pageName %>;
     return {
       setup: function () {
-        <%= pageName %> = new <%= pageName %>(this.remote);
+        <%= pageName %> = new <%= _.capitalize(pageName) %>(this.remote);
       },
 
       // 'my first test': function () {

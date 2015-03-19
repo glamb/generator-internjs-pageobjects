@@ -43,19 +43,23 @@ module.exports = yeoman.generators.Base.extend({
 
   files: function() {
     this.template('_testsuite.js', 'tests/'+this.pageName+'/'+_.snakeCase(this.suiteName)+'.js');
-  },
-
-  suiteBootstrapper: function () {
-
     var testSuites = this.expand('tests/'+this.pageName+'/*');
     _.forEach(testSuites, function(test) {
       tests.push(_.last(test.split(path.sep)));
     });
+    console.info('before remove: '+tests);
+    _.pull(tests, 'all.js');
+    console.info('after remove: '+tests);
 
     this.fs.copyTpl(
       this.templatePath('_all.js'),
       this.destinationPath('tests/'+this.pageName+'/all.js'),
       { tests: tests }
     );
+  },
+
+  suiteBootstrapper: function () {
+
+
   },
 });
