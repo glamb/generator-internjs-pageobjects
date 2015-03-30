@@ -1,7 +1,7 @@
 // The Base page object will be the default. This object will contain
 // any element that are found throughout your site, such as the navigation bar, or footer
 define([
-  './Base'
+  './base'
 ], function (Base){
   'use strict';
 
