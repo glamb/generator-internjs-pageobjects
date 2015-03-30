@@ -2,7 +2,7 @@ define([
   'intern',
   'intern!object',
   'intern/chai!assert',
-  'pageObjects/pageName %>'
+  'pageObjects/<%= pageName %>'
 ], function (intern, registerSuite, assert, <%= _.capitalize(pageName) %>) {
   'use strict';
 
