@@ -32,7 +32,7 @@ define([
     loader: {
       // Packages that should be registered with the loader in each testing environment
       packages: [ { name: 'internTests', location: './tests' },
-      { name: 'pageObjects', location: './pages' } ]
+      { name: 'pages', location: './pages' } ]
     },
 
     // Functional test suite(s) to run in each browser once non-functional tests are completed
