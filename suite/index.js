@@ -36,7 +36,7 @@ module.exports = yeoman.generators.Base.extend({
     }];
 
     this.prompt(prompts, function (props) {
-      this.pageName = props.pageName.toLowerCase();
+      this.pageName = props.pageName;
       done();
     }.bind(this));
   },
