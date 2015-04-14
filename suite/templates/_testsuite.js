@@ -9,6 +9,8 @@ define([
   registerSuite(function () {
     var <%= pageName %>;
     return {
+      name: '<%= suiteName %>',
+
       setup: function () {
         <%= pageName %> = new <%= _.capitalize(pageName) %>(this.remote);
       },
