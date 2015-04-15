@@ -23,7 +23,7 @@ module.exports = yeoman.generators.Base.extend({
   suiteBootstrapper: function () {
     var suiteDirs = this.expand('tests/*/');
     _.forEach(suiteDirs, function(suite) {
-      var s = suite.split(path.sep);
+      var s = suite.split('/');
       suites.push(s[1]);
     });
 

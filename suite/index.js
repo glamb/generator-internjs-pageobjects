@@ -10,7 +10,7 @@ module.exports = yeoman.generators.Base.extend({
   initializing: function () {
     var suiteDirs = this.expand('tests/*/');
     _.forEach(suiteDirs, function(suite) {
-      var s = suite.split(path.sep);
+      var s = suite.split('/');
       suites.push(s[1]);
     });
 
@@ -50,7 +50,7 @@ module.exports = yeoman.generators.Base.extend({
     suiteBootstrapper: function () {
       var testSuites = this.expand('tests/'+this.pageName+'/*');
       _.forEach(testSuites, function(test) {
-        tests.push(_.last(test.split(path.sep)));
+        tests.push(_.last(test.split('/')));
       });
       _.pull(tests, 'all.js');
 
